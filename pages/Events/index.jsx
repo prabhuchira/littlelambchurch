@@ -6,7 +6,8 @@ import Head from 'next/head'
 
 
 const events = [
-    {
+    {   
+        id:1,
         year:"2022",
         date:"25",
         month:"DECEMBER",
@@ -14,6 +15,7 @@ const events = [
         timing:"09:30 AM - 12:30 PM"
     },
     {
+        id:2,
         year:"2022",
         date:"17",
         month:"APRIL",
@@ -21,6 +23,7 @@ const events = [
         timing:"09:30 AM - 12:30 PM"
     },
     {
+        id:3,
         year:"2022",
         date:"15",
         month:"APRIL",
@@ -28,6 +31,7 @@ const events = [
         timing:"09:30 AM - 12:30 PM"
     },
     {
+        id:4,
         year:"2022",
         date:"15",
         month:"APRIL",
@@ -55,7 +59,7 @@ export default function Events(){
 
                 <br/>
                 <div className="myEvents roboto" >
-                    {events.map(event=>  <div className="eventsItem  text-muted">
+                    {events.map(event=>  <div key={event.id} className="eventsItem  text-muted">
                         <div className="lato-heading h6 ">{event.year}</div>
                         <div className="lato-heading h1 ">{event.date}</div>
                         <div className="event_month_name">{event.month}</div>

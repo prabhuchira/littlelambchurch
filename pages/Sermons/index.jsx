@@ -7,6 +7,7 @@ import Header from "../../shared/Header/Header";
 let songs = [
 
     {
+        id:1,
         date:"13th Feb 2022",
         yt_link:"https://www.youtube.com/embed/2BFfXC5_cdM",
         title:"Do you know who you are ?",
@@ -14,6 +15,7 @@ let songs = [
     },
     
     {
+        id:2,
         date:"8th May 2022",
         yt_link:"https://www.youtube.com/embed/hLlcabNjeFM",
         title:"A Mothers Request",
@@ -21,12 +23,14 @@ let songs = [
     
     },
     {
+        id:3,
         date:"  11th April 2022 ",
         yt_link:"https://www.youtube.com/embed/xXioLath8rQ",
         title:"Jesus Curses a Fig Tree",
         speaker:"Rev.Dr. Sudharshan Rao"
     },
     {
+        id:4,
         date:"10th April 2022",
         yt_link:"https://www.youtube.com/embed/vBYw64oIdlI",
         title:"Palm Sunday Service  ",
@@ -115,8 +119,8 @@ export default function Worship(){
                        {
                            songs.map(i=>{
                                return(
-                                   <div className="col-lg-5 ">
-                                <div key={i.yt_link} className="  p-3   my-2 song_item rounded-2">
+                                   <div key={i.yt_link} className="col-lg-5 ">
+                                <div  className="  p-3   my-2 song_item rounded-2">
                        
                          
                           
