@@ -51,7 +51,10 @@ export default function ContactUs(){
                     
               
 
-                    <div className="mapouter add_border"><div className="gmap_canvas"><iframe width="388" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=little%20lamb%20church&t=&z=19&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><a href="https://putlocker-is.org"></a><br/>
+                    <div className="mapouter add_border"><div className="gmap_canvas">
+                      <div className="frame-container">
+                      <iframe className="responsive-iframe"  id="gmap_canvas" src="https://maps.google.com/maps?q=little%20lamb%20church&t=&z=19&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"></iframe><a href="https://putlocker-is.org"></a><br/>
+                      </div>
                     {/* <style>.mapouter{position:relative;text-align:right;height:393px;width:388px;}</style>
                     <style>.gmap_canvas {overflow:hidden;background:none!important;height:393px;width:388px;}</style> */}
                     

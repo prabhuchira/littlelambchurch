@@ -9,7 +9,7 @@ export default function Resources(){
 
   const goToPage = (page)=>{
     console.log(page)
-      if(page !== '/Worship' && page !== '/Sermons'){
+      if(page !== '/Worship' && page !== '/Sermons' && page !== '/Events'){
         return;
       }
 
@@ -37,7 +37,7 @@ export default function Resources(){
     
       </div>
 
-      <div className="col-md-6 bg-container overflow-hidden p-0">
+      <div className="col-md-6 bg-container overflow-hidden p-0" onClick={()=>goToPage('/Events')}>
   
         <div className="item" ></div>
 

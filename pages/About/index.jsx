@@ -26,7 +26,7 @@ export default function About(){
   
   
         <div className="container-fluid text-center page-layout ">
-          <div className="container my-bg p-5 add_border" >
+          <div className="container my-bg p-3 p-lg-5 add_border" >
             <h1 className="lato-heading py-1    "></h1>
 
             {/* <h1 className="lato-heading py-5    ">OUR STORY</h1> */}

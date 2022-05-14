@@ -34,10 +34,10 @@
 
 .song_title{
     color:grey;
-    border-left:3px solid rgb(250, 87, 87);
-    padding: 10px;
+    border-left:3px solid rgb(113, 113, 113);
+    padding-inline: 10px;
     margin-left:2px;
-    margin-block:20px;
+    /* margin-block:20px; */
     font-family: 'Lato';
     font-weight: bold !important;
 }

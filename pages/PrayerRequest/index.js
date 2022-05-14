@@ -30,8 +30,8 @@ export default function PrayerRequest(){
 
 
       <div className="container-fluid page-layout">
-        <div className="container my-bg p-5 add_border">
-          <h1 className="lato-heading py-5 text-center  text-muted  ">PRAYER REQUEST</h1>
+        <div className="container my-bg p-3 p-lg-5 add_border">
+          <h1 className="lato-heading py-3 py-lg-5 text-center  text-muted  ">PRAYER REQUEST</h1>
 
           <form className="lato-text">
 

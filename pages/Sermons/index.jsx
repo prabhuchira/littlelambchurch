@@ -1,4 +1,5 @@
 import Head from "next/head";
+import BreadCrumb from "../../shared/BreadCrumb/BreadCrumb";
 import Footer from "../../shared/Footer/Footer";
 import Header from "../../shared/Header/Header";
 // import  worship from "./../S"
@@ -52,7 +53,7 @@ export default function Worship(){
                 <div className="container" >
                     <div className="search_bar">
                         <div className="d-flex">
-                        <h3  className="mx-2 px-3  custom_heading" style={{color:"white"}}>Sermons</h3>
+                        <h3  className="mx-2 px-3  gotham" style={{color:"white"}}>Sermons</h3>
                         {/* <h3  className="mx-2 px-3  custom_heading">Sermons</h3> */}
                         </div>
                         <input style={{maxWidth:"400px"}} className="form-control rounded-2" type="search" placeholder="Search Sermons" />
@@ -114,7 +115,8 @@ export default function Worship(){
                        {
                            songs.map(i=>{
                                return(
-                                <div key={i.yt_link} className="col-lg-5 my-2    mx-3 song_item rounded-2">
+                                   <div className="col-lg-5 ">
+                                <div key={i.yt_link} className="  p-3   my-2 song_item rounded-2">
                        
                          
                           
@@ -133,7 +135,7 @@ export default function Worship(){
                                 
                                 <br/>
                                 
-                                <div className="d-flex justify-content-between align-items-center my-2">
+                                <div className="d-flex justify-content-between align-items-center my-2" style={{fontSize:'13px'}}>
                                     <div className="mx-3 text-start my-1 song_date" >{i.date}
                                     </div>
     
@@ -142,6 +144,7 @@ export default function Worship(){
                                     </div>
                                 </div>
                                 
+                            </div>
                             </div>
                                )
                            })

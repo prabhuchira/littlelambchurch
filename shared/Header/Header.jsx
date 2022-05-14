@@ -36,7 +36,7 @@ export default function Header(){
             <div className="d-flex align-items-center justify-content-center">
                 <div>
                     {/* <img src={logo} width="60px"/> */}
-                    <Image src={logo} width="60px"></Image>
+                    <Image src={logo} className="logo"></Image>
                 </div>
                 <div className="mx-2 text-center">
                     <span className="logo-heading ">Little Lamb Church</span>
@@ -65,7 +65,7 @@ export default function Header(){
                 <a className="nav-link" href="/Sermons">Sermons</a>
               </li>
               <li className="nav-item mx-3 text-uppercase">
-                <a className="nav-link" href="/under_construction">Events</a>
+                <a className="nav-link" href="/Events">Events</a>
               </li>
               <li className="nav-item mx-3 text-uppercase special-btn px-2">
                 <a className="nav-link " style={{color:"white"}} href="/PrayerRequest">Prayer Request</a>

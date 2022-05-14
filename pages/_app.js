@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import '../styles/worship.css'
 import '../styles/contactus.css'
 import '../styles/resources.css'
+import '../styles/events.css'
 
 
 import './../shared/Header/Header.css'

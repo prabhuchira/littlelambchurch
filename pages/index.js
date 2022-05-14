@@ -43,14 +43,14 @@ export default function Home() {
         <div className="hero">
           <div className="hero-container w-100">
               <div className="hero-content container">
-                  <div className="text-align-right align-items-center  p-3">
+                  <div className="text-align-right align-items-center  p-0 p-lg-3">
                       <div className="col-md-12   py-3  text-justify  order-2 order-md-1 order-lg-1 ">
                         <br/>
                         <div className="text-center ">
                         <small className=" d-block fw-0 my-3" style={{fontFamily:"Lato"}}>Welcome to</small>
                       
            
-                        <h1 style={{fontSize:"70px",lineHeight: 1}}>
+                        <h1 className="llc-heading" style={{lineHeight: 1}}>
                            Little Lamb Church
                           </h1>
                           <div className="d-flex justify-content-center">
@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
             
                 <button className="ctm-btn-light my-3">
-                    <img src="/assets/yt-logo.png" className="mx-2" width="40px" height="40px" / >YOUTUBE.COM
+                    <img src="/assets/yt-logo.png" className="mx-2 yt-logo" / >YOUTUBE.COM
                 </button>
             </div>
         </div>

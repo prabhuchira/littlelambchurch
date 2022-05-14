@@ -4,7 +4,7 @@ import Header from "../../shared/Header/Header";
 
 import React from 'react';
 import Head from "next/head";
-
+import BreadCrumb from "../../shared/BreadCrumb/BreadCrumb";
 
 
 let songs = [
@@ -40,6 +40,9 @@ export default function Worship(){
 
 
 
+
+ 
+
     const searchRef = React.useRef();
 
   
@@ -66,8 +69,13 @@ export default function Worship(){
                 <div className="container" >
                     <div className="search_bar">
                         <div className="d-flex">
-                        <h3  className="mx-2 px-3  custom_heading" style={{color:"white"}}>Worship</h3>
-                        {/* <h3  className="mx-2 px-3  custom_heading">Sermons</h3> */}
+                            <div className="mx-2 px-3">
+                        <h3  className="  gotham" style={{color:"white"}}>
+                            Worship
+                            </h3>
+                            {/* <BreadCrumb/> */}
+                            </div>
+                     
                         </div>
                         <input ref={searchRef} onInput={searchHandler} style={{maxWidth:"400px"}} className="form-control rounded-2" type="search" placeholder="Search Songs" />
                     </div>
@@ -82,13 +90,15 @@ export default function Worship(){
                        {
                            songList.map(i=>{
                                return(
-                                <div key={i.yt_link} className="col-lg-5 m-3 song_item">
+                                   <div key={i.yt_link}  className="col-lg-5 ">
+                                <div className="m-3 song_item">
                        
                          
                           
-                                <div >
+                                <div className="my-3">
                                     
-                                    <div className="mx-2 text-start h4 text-red song_title my-3">{i.title} </div>
+                                    <div className="mx-2 text-start h4 text-red song_title ">{i.title} </div>
+                                    <div className="mx-4  text-start text-uppercase sermon_speaker">LLC Choir</div>
                                 </div>
                                 {/* <iframe width={"500px"} height={"250px"}  src={i.yt_link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
 
@@ -100,14 +110,18 @@ export default function Worship(){
                                 <br/>
                                 
                                 <div className="d-flex justify-content-between align-items-center my-2">
-                                    <div className="mx-3 text-start my-1 song_date" >{i.date}
+                                    <div className="mx-3 text-start my-1 song_date" >
+                                        {i.date}<br/>
+                                        <div className="badge badge-pill  bg-light text-dark ">#praise</div>
                                     </div>
+                                    
     
                                     <div className="mx-3 text-start my-1 song_date">
                                         <button className="btn btn-md view_youtube">&#9658; VIEW ON YOUTUBE</button>
                                     </div>
                                 </div>
                                 
+                            </div>
                             </div>
                                )
                            })

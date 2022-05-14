@@ -315,8 +315,54 @@
 }
 
 
+.yt-logo{
+    width: 40px;
+    height:40px;
+}
+
+.logo{
+    width:60px;
+}
+
+
+.llc-heading{
+    font-size:70px;
+}
+
+
 
 @media screen and (max-width:800px){
+    .llc-heading{
+        font-size:45px;
+    }
+    
+    
+    .logo{
+        width:20px !important; 
+    }
+
+    .ctm-btn-light{
+        font-size:13px;
+    }
+
+
+    .logo-heading{
+        font-size: 18px;
+    }
+
+    .logo-subheading{
+        font-size:12px;
+    }
+
+    
+
+ 
+.yt-logo{
+    width: 20px;
+    height:20px;
+}
+
+
     .hero-content{
         font-size: 26px;
         line-height: 1.5;
@@ -331,7 +377,7 @@
     }
     
     .join{
-        font-size:22px;
+        font-size:14px;
     }
 
     .join .time {
