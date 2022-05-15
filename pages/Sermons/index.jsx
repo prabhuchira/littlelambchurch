@@ -139,7 +139,7 @@ export default function Worship(){
                                     
                                     <div className=" text-start h4 text-red sermon_title ">{i.title} </div>
                                     <div className="text-start text-uppercase sermon_speaker">{i.speaker}</div>
-                                    <div className=" rounded-3   text-start d-block my-2 " style={{textAlign:'left',fontSize:"12px"}}>{i.tags.length>0? i.tags.map(tag=><span className="px-2 bg-primary text-white p-1 rounded-3 mx-1" >{tag}</span>):null}</div>
+                                    <div className=" rounded-3   text-start d-block my-2 " style={{textAlign:'left',fontSize:"12px"}}>{i.tags.length>0? i.tags.map(tag=><span key={Math.random(100)*29} className="px-2 bg-primary text-white p-1 rounded-3 mx-1" >{tag}</span>):null}</div>
                                 </div>
                                 <br/>
                                 {/* <iframe width={"500px"} height={"250px"}  src={i.yt_link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
