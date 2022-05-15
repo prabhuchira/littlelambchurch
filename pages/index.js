@@ -38,17 +38,31 @@ export default function Home() {
         <Header/>
       <main className={styles.main}>
 
-
-
         <div className="hero">
+
+       
+ 
+          
           <div className="hero-container w-100">
+          <div className='text-center' >
+            <div className='b-verse'>
+              Better is one day in your courts
+          than a thousand elsewhere<span className='b-verse-sub mx-2'>- Psalms 84:10</span>
+          {/* <div className='text-center b-verse-sub '><div className='text-end'></div></div> */}
+    </div>
+    </div>
               <div className="hero-content container">
+                
                   <div className="text-align-right align-items-center  p-0 p-lg-3">
+                    
                       <div className="col-md-12   py-3  text-justify  order-2 order-md-1 order-lg-1 ">
+                        <div>
+               
+                        </div>
                         <br/>
                         <div className="text-center ">
                         <small className=" d-block fw-0 my-3" style={{fontFamily:"Lato"}}>Welcome to</small>
-                      
+
            
                         <h1 className="llc-heading" style={{lineHeight: 1}}>
                            Little Lamb Church
@@ -58,7 +72,7 @@ export default function Home() {
                           </div>
                         <div style={{letterSpacing: "10px"}} >VANASTHALIPURAM</div>
 
-                        <button onClick={goToAbout} className="btn btn-light w-20  btn-md mt-3 click-more fw-bold "><i className="fa-solid fa-circle-right"></i>Click to know more</button>
+                        <button onClick={goToAbout} className="btn btn-light w-20  btn-md mt-3 click-more fw-bold "><i className="fa-solid fa-circle-right"></i>Know more</button>
                       </div>
                     </div>
 
@@ -98,9 +112,9 @@ export default function Home() {
         <h1 className="main-heading mt-5">Latest Stream</h1>
 
         <br/>
-
+        
         <div className='frame-container'>
-          <iframe className='responsive-iframe'  src="https://www.youtube.com/embed/hLlcabNjeFM" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          <iframe className='responsive-iframe'  src="https://www.youtube.com/embed/j38L03lsp4Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         </div>
       </div>
 

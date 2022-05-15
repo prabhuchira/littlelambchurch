@@ -38,6 +38,7 @@
 
 .bg1{
     background-image: url('/assets/choir2.png');
+    /* background-image: url('/assets/worship.jpg'); */
   
 
 }
@@ -81,11 +82,14 @@
 }
 
 .bg2{
+    /* background-image: url('/assets/christmas.jpg'); */
     background-image: url('/assets/christmas.png');
+
 }
 
 .bg3{
     background-image: url('/assets/pastor.png');
+    /* background-image: url('/assets/bible.jpg'); */
 }
 
 

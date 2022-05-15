@@ -386,3 +386,20 @@
 
 
 }
+
+
+.b-verse{
+    flex: 1 1 0%;
+    text-align: center;
+    position: relative;
+    top: -90px;
+    color: #ffffff82;
+    font-family: 'Rosarivo', serif;
+  
+  }
+
+  .b-verse-sub{
+    font-family: 'gothamLight', serif;
+    font-size: 13px;
+  }
+

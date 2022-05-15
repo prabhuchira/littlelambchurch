@@ -4,6 +4,8 @@ import Footer from "../../shared/Footer/Footer";
 import Header from "../../shared/Header/Header";
 // import  worship from "./../S"
 
+import {CaretDownOutlined,CalendarOutlined} from '@ant-design/icons'
+
 let songs = [
 
     {
@@ -11,7 +13,8 @@ let songs = [
         date:"13th Feb 2022",
         yt_link:"https://www.youtube.com/embed/2BFfXC5_cdM",
         title:"Do you know who you are ?",
-        speaker:"Rev.Dr. Sudharshan Rao"
+        speaker:"Rev.Dr. Sudharshan Rao",
+        tags:["#Lent Meeting"]
     },
     
     {
@@ -19,7 +22,8 @@ let songs = [
         date:"8th May 2022",
         yt_link:"https://www.youtube.com/embed/hLlcabNjeFM",
         title:"A Mothers Request",
-        speaker:"Rev.Dr. Sudharshan Rao"
+        speaker:"Rev.Dr. Sudharshan Rao",
+        tags:["#Lent Meeting"]
     
     },
     {
@@ -27,14 +31,16 @@ let songs = [
         date:"  11th April 2022 ",
         yt_link:"https://www.youtube.com/embed/xXioLath8rQ",
         title:"Jesus Curses a Fig Tree",
-        speaker:"Rev.Dr. Sudharshan Rao"
+        speaker:"Rev.Dr. Sudharshan Rao",
+        tags:["#Lent Meeting"]
     },
     {
         id:4,
         date:"10th April 2022",
         yt_link:"https://www.youtube.com/embed/vBYw64oIdlI",
         title:"Palm Sunday Service  ",
-        speaker:"Rev.Dr. Sudharshan Rao"
+        speaker:"Rev.Dr. Sudharshan Rao",
+        tags:["#Lent Meeting","Christmas"]
     },
     
 ]
@@ -67,10 +73,15 @@ export default function Worship(){
             </div>
            
                     
-            <div className=" my-bg3  p-3 d-xs-none d-lg-block">
+            <div className=" my-bg3  p-3 ">
                 <div className="container ">
                     <div className="row   " >
-                       <div className="col-lg-3  ">
+                       <div className="col-lg-3 d-block d-lg-none ">
+                            <div className="text-end ">
+                                <button className=" btn btn-md btn-light border-1  " > Filters <CaretDownOutlined className="align-middle"/></button>
+                            </div>
+                           </div>
+                       <div className="col-lg-3 d-none d-lg-block  ">
                            <div className="my-bg2 m-1 rounded-2">
                                   <div className="p-4">
                                       <h3>Year</h3>
@@ -128,6 +139,7 @@ export default function Worship(){
                                     
                                     <div className=" text-start h4 text-red sermon_title ">{i.title} </div>
                                     <div className="text-start text-uppercase sermon_speaker">{i.speaker}</div>
+                                    <div className=" rounded-3   text-start d-block my-2 " style={{textAlign:'left',fontSize:"12px"}}>{i.tags.length>0? i.tags.map(tag=><span className="px-2 bg-primary text-white p-1 rounded-3 mx-1" >{tag}</span>):null}</div>
                                 </div>
                                 <br/>
                                 {/* <iframe width={"500px"} height={"250px"}  src={i.yt_link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
@@ -139,12 +151,12 @@ export default function Worship(){
                                 
                                 <br/>
                                 
-                                <div className="d-flex justify-content-between align-items-center my-2" style={{fontSize:'13px'}}>
-                                    <div className="mx-3 text-start my-1 song_date" >{i.date}
+                                <div className="d-flex justify-content-between align-items-center my-2" style={{fontSize:'12px'}}>
+                                    <div className="mx-3 text-start my-1 song_date" ><CalendarOutlined className="align-middle "/>{i.date}
                                     </div>
     
                                     <div className="mx-3 text-start my-1 song_date">
-                                        <button className="btn btn-md view_youtube">&#9658; VIEW ON YOUTUBE</button>
+                                        <button className="btn btn-md view_youtube"  style={{fontSize:"12px !important"}}>&#9658; VIEW ON YOUTUBE</button>
                                     </div>
                                 </div>
                                 

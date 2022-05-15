@@ -40,14 +40,14 @@ export default function PrayerRequest(){
               <div className="col-lg-6">
                 <div className="form-group">
                   <label htmlFor="exampleInputEmail1">Name:</label>
-                  <input type="text" className="form-control rounded-0 bw-0" id="exampleInputEmail1" aria-describedby="emailHelp" />
+                  <input type="text" className="form-control  bw-0" id="exampleInputEmail1" aria-describedby="emailHelp" />
          
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="form-group">
                   <label htmlFor="exampleInputPassword1">Lastname:</label>
-                  <input type="text" className="form-control rounded-0 bw-0" id="exampleInputPassword1"/ >
+                  <input type="text" className="form-control  bw-0" id="exampleInputPassword1"/ >
                 </div>
               </div>
             </div>
