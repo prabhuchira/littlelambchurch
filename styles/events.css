@@ -1,27 +1,22 @@
-.myEvents{
-
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.myEvents {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
-
-.eventsItem{
-    height:300px;
-    width: 300px;
-    background-color: rgb(237, 237, 237);
-    padding:40px;
-    margin:10px;
+.eventsItem {
+	height: 300px;
+	width: 300px;
+	background-color: rgb(237, 237, 237);
+	padding: 40px;
+	margin: 10px;
 }
-
-.roboto{
-    font-family: 'Roboto';
+.roboto {
+	font-family: 'Roboto';
 }
-
-.event_month_name{
-    letter-spacing: 2px;
-    color:rgb(174, 172, 172);
+.event_month_name {
+	letter-spacing: 2px;
+	color: rgb(174, 172, 172);
 }
-
-.gotham{
-    font-family: 'gothamLight';
+.gotham {
+	font-family: 'gothamLight';
 }

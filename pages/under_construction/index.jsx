@@ -1,9 +1,7 @@
-export default function UnderConstruction(){
-
-
-    return(
-        <div>
-            This page is under construction
-        </div>
-    )
+export default function UnderConstruction() {
+	return (
+		<div>
+			This page is under construction
+		</div>
+	)
 }

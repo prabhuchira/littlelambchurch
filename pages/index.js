@@ -4,7 +4,7 @@ import React from 'react'
 import Footer from '../shared/Footer/Footer'
 import Header from '../shared/Header/Header'
 import styles from '../styles/Home.module.css'
-import {useRouter} from 'next/router';
+import { useRouter } from 'next/router';
 import ContactUs from '../components/ContactUs'
 import Resources from '../shared/Resources/Resources'
 import About from './About'
@@ -12,16 +12,10 @@ import About from './About'
 
 
 export default function Home() {
-
   const router = useRouter();
-
-
-
-
-  const goToAbout = ()=>{
+  const goToAbout = () => {
     router.push('#about')
   }
-
   return (
     <div className={styles.container}>
       <Head>
@@ -30,109 +24,70 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
 
         <title>LITTLE LAMB CHURCH</title>
-    
-
-
       </Head>
-
-        <Header/>
+      <Header />
       <main className={styles.main}>
-
         <div className="hero">
-
-       
- 
-          
           <div className="hero-container w-100">
-          <div className='text-center' >
-            <div className='b-verse'>
-              Better is one day in your courts
-          than a thousand elsewhere<span className='b-verse-sub mx-2'>- Psalms 84:10</span>
-          {/* <div className='text-center b-verse-sub '><div className='text-end'></div></div> */}
-    </div>
-    </div>
-              <div className="hero-content container">
-                
-                  <div className="text-align-right align-items-center  p-0 p-lg-3">
-                    
-                      <div className="col-md-12   py-3  text-justify  order-2 order-md-1 order-lg-1 ">
-                        <div>
-               
-                        </div>
-                        <br/>
-                        <div className="text-center ">
-                        <small className=" d-block fw-0 my-3" style={{fontFamily:"Lato"}}>Welcome to</small>
-
-           
-                        <h1 className="llc-heading" style={{lineHeight: 1}}>
-                           Little Lamb Church
-                          </h1>
-                          <div className="d-flex justify-content-center">
-                            <hr className="d-block w-50 "/>
-                          </div>
-                        <div style={{letterSpacing: "10px"}} >VANASTHALIPURAM</div>
-
-                        <button onClick={goToAbout} className="btn btn-light w-20  btn-md mt-3 click-more fw-bold "><i className="fa-solid fa-circle-right"></i>Know more</button>
-                      </div>
-                    </div>
-
-                      <div className="col-md-6 offset-md-6 order-2">
-                       
-                      </div>
-  
-                     
-                  
-                  </div>
-                
+            <div className='text-center' >
+              <div className='b-verse'>
+                Better is one day in your courts
+                than a thousand elsewhere<span className='b-verse-sub mx-2'>- Psalms 84:10</span>
+                {/* <div className='text-center b-verse-sub '><div className='text-end'></div></div> */}
               </div>
-             
-              
-          </div>
-
-    
-    
-        <div className="join">
-            <div className="container d-flex align-items-center justify-content-center">
-                <div className="mx-5" > 
-                    <div>JOIN US ONLINE</div>
-                    <div className="time">9:30 AM IST SUNDAY</div>
-                </div>
-            
-                <button className="ctm-btn-light my-3">
-                    <img src="/assets/yt-logo.png" className="mx-2 yt-logo" / >YOUTUBE.COM
-                </button>
             </div>
+            <div className="hero-content container">
+              <div className="text-align-right align-items-center  p-0 p-lg-3">
+                <div className="col-md-12   py-3  text-justify  order-2 order-md-1 order-lg-1 ">
+                  <div>
+                  </div>
+                  <br />
+                  <div className="text-center ">
+                    <small className=" d-block fw-0 my-3" style={{ fontFamily: "Lato" }}>Welcome to</small>
+                    <h1 className="llc-heading" style={{ lineHeight: 1 }}>
+                      Little Lamb Church
+                    </h1>
+                    <div className="d-flex justify-content-center">
+                      <hr className="d-block w-50 " />
+                    </div>
+                    <div style={{ letterSpacing: "10px" }} >VANASTHALIPURAM</div>
+                    <button onClick={goToAbout} className="btn btn-light w-20  btn-md mt-3 click-more fw-bold "><i className="fa-solid fa-circle-right"></i>Know more</button>
+                  </div>
+                </div>
+                <div className="col-md-6 offset-md-6 order-2">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="join">
+            <div className="container d-flex align-items-center justify-content-center">
+              <div className="mx-5" >
+                <div>JOIN US ONLINE</div>
+                <div className="time">9:30 AM IST SUNDAY</div>
+              </div>
+              <button className="ctm-btn-light my-3">
+                <img src="/assets/yt-logo.png" className="mx-2 yt-logo" />YOUTUBE.COM
+              </button>
+            </div>
+          </div>
         </div>
-
-      </div>
-      
-      
-
-      <div className="container ">
-        <h1 className="main-heading mt-5">Latest Stream</h1>
-
-        <br/>
-        
-        <div className='frame-container'>
-          <iframe className='responsive-iframe'  src="https://www.youtube.com/embed/j38L03lsp4Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        <div className="container ">
+          <h1 className="main-heading mt-5">Latest Stream</h1>
+          <br />
+          <div className='frame-container'>
+            <iframe className='responsive-iframe' src="https://www.youtube.com/embed/j38L03lsp4Q" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
         </div>
-      </div>
-
-
-      <Resources/>
-      <div className="container ">
-        <h1 className="main-heading mt-5">Our Story</h1>
-      </div>
-      <div id="about">
-        <About/>
-      </div>
-      <ContactUs/>
-      <Footer/>
+        <Resources />
+        <div className="container ">
+          <h1 className="main-heading mt-5">Our Story</h1>
+        </div>
+        <div id="about">
+          <About />
+        </div>
+        <ContactUs />
+        <Footer />
       </main>
-
-
     </div>
-
-
   )
 }
