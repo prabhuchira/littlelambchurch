@@ -51,7 +51,7 @@ export default function Worship() {
 					<div className="search_bar">
 						<div className="d-flex">
 							<div className="mx-2 px-3">
-								<h3 className="  gotham" style={{ color: "white" }}>
+								<h3 style={{ color: "white" }}>
 									Worship
 								</h3>
 								{/* <BreadCrumb/> */}

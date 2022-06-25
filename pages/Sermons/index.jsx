@@ -54,10 +54,7 @@ export default function Worship() {
 			<div className=" custom_bg">
 				<div className="container" >
 					<div className="search_bar">
-						<div className="d-flex">
-							<h3 className="mx-2 px-3  gotham" style={{ color: "white" }}>Sermons</h3>
-							{/* <h3  className="mx-2 px-3  custom_heading">Sermons</h3> */}
-						</div>
+						<h3 className="mx-2 px-3" style={{ color: "white" }}>Sermons</h3>
 						<input style={{ maxWidth: "400px" }} className="form-control rounded-2" type="search" placeholder="Search Sermons" />
 					</div>
 				</div>
