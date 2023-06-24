@@ -67,6 +67,9 @@ export default function Header(){
               <li className="nav-item mx-3 text-uppercase">
                 <a className="nav-link" href="/Events">Events</a>
               </li>
+              <li className="nav-item mx-3 text-uppercase">
+                <a className="nav-link " href="/SongList">Song List</a>
+              </li>
               <li className="nav-item mx-3 text-uppercase special-btn px-2">
                 <a className="nav-link " style={{color:"white"}} href="/PrayerRequest">Prayer Request</a>
               </li>
