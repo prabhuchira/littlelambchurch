@@ -139,8 +139,8 @@ export default function Worship() {
 										className="years"
 									>
 										
-										
 										{
+											  getDates().map((year,index)=><li  onClick={()=>filterDate(index,year)}><span style={activeTab == index ? {backgroundColor:"black",color:"white"} : {}}>{year}</span></li>)
 										}
 									</ul>
 								</div>
