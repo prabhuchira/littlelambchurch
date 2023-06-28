@@ -2311,7 +2311,8 @@ const youtubePlaylists = {
 ],
     data_by_tags:[
         { name:"Lent",playlistId:"PLWhGKfRW0UWCB5igveomaNtpq9yU7dVs8"},
-        {name:"Youth Retreats",playlistId:"PLWhGKfRW0UWAUEJ01446CkRP1OAdo5Tdc"}
+        {name:"Youth Retreats",playlistId:"PLWhGKfRW0UWAUEJ01446CkRP1OAdo5Tdc"},
+        {name:"Baptisms",playlistId:"PLWhGKfRW0UWAuccT7sJH9XKKbYyk8rEuk"},
         
     ]
 }
@@ -2423,7 +2424,7 @@ export default function Worship() {
 	React.useEffect(()=>{
 		// myreq();
         console.log('WINDOWS',"CALLED TWICE")
-        callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
+        // callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
 	// 	setSongs(example)
 	// 	setPageProps({
 	// 		pageLength:example.pageInfo.totalResults,
@@ -2440,11 +2441,10 @@ export default function Worship() {
         const myRes = await fetch(`https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=1000&playlistId=${value.playlistId}&key=AIzaSyDwfR7vKOJ5zq6QVjzvPsX2RDxsE1qADyM`);
          myRes.json().then(res=>{
             setSongs([])
-            setTimeout(()=>{
+            
                 setCopySongs(res.items);
                 setSongs(res.items)
                 setLoading(false)
-            },2000)
           
             console.log(songs,"SONG_ITEMS");
             console.log(res.items,"RES_ITEMS");
@@ -2507,7 +2507,7 @@ export default function Worship() {
 
 {/* <li  onClick={()=>filterDate(index,year)}><span style={activeTab == index ? {backgroundColor:"black",color:"white"} : {}}>{year}</span></li> */}
                                         {
-                                            youtubePlaylists.data_by_year.map((yearData,index)=> <li onClick={()=>  callYoutubeEndPoint(yearData,index)}><span style={activeTab == yearData.name ? {backgroundColor:"black",color:"white"} : {}} >{yearData.name}</span></li>)
+                                            youtubePlaylists.data_by_year.map((yearData,index)=> <li key={index} onClick={()=>  callYoutubeEndPoint(yearData,index)}><span style={activeTab == yearData.name ? {backgroundColor:"black",color:"white"} : {}} >{yearData.name}</span></li>)
                                         }
 
 									</ul>
@@ -2531,7 +2531,7 @@ export default function Worship() {
 										<li><span>Easter</span></li> */}
 
                                         {
-                                            youtubePlaylists.data_by_tags.map((tagData,index)=> <li onClick={()=>callYoutubeEndPoint(tagData,index)}><span style={activeTab == tagData.name ? {backgroundColor:"black",color:"white"} : {}} >{tagData.name}</span></li>)
+                                            youtubePlaylists.data_by_tags.map((tagData,index)=> <li key={index} onClick={()=>callYoutubeEndPoint(tagData,index)}><span style={activeTab == tagData.name ? {backgroundColor:"black",color:"white"} : {}} >{tagData.name}</span></li>)
                                         }
 									</ul>
 								</div>
@@ -2547,7 +2547,7 @@ export default function Worship() {
 							<div className="  rounded-2">
 								<div className="row text-center" >
 									{
-										songs.length > 0 ? songs.map(i => {
+										songs.length > 0 ? songs.reverse().map(i => {
 											return  (
 												i.snippet.title !== "Private video" && <div key={i.etag} className="col-lg-5 ">
 													<div className="  p-3   my-2 song_item rounded-2">
