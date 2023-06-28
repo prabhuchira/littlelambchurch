@@ -45,11 +45,12 @@
 }
 .song_date{
 	letter-spacing: 1px;
-	color:rgb(174, 174, 174);
-	font-family: 'Lato';
-	font-weight: bold !important;
-	display: flex;
+    color: rgb(174, 174, 174);
+    font-family: 'Fjalla One';
+    font-weight: bold !important;
+    display: flex;
     align-items: center;
+	
 }
 .view_youtube{
 	background-color: red !important;

@@ -49,6 +49,7 @@
 	text-transform: uppercase;
 	letter-spacing: 9px;
 	z-index: 1;
+	cursor:pointer;
 }
 .overflow-hidden {
 	overflow: hidden;

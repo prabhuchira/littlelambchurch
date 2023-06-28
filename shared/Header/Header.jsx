@@ -2,11 +2,25 @@
 
 import logo from './logo.png'
 import Image from 'next/image'
-import React from 'react'
+import Link from 'next/link';
+import { useRouter } from 'next/router'
+import React, { useState } from 'react'
 
 
 
 export default function Header(){
+
+  const router = useRouter();
+
+  const [link,setLink] = useState("/");
+
+  
+
+
+  const getLink = (e)=>{
+    console.log(e);
+    console.log(router.pathname,"PATHNAME")
+  }
 
   React.useEffect(()=>{
     window.addEventListener("scroll",function(){
@@ -52,24 +66,32 @@ export default function Header(){
           </button>
           <div className="collapse navbar-collapse justify-content-end " id="navbarNav">
             <ul className="navbar-nav">
-              <li className="nav-item mx-3 text-uppercase">
-                <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <li className="nav-item mx-3 text-uppercase active" >
+                <Link href={"/"}><a className='nav-link' style={ router.pathname == "/" ? {fontWeight:"bold"} : {}}>Home</a></Link>
+                {/* <a onClick={(e)=>getLink(e)}  className='nav-link'  aria-current="page" href="/">Home</a> */}
             </li>
               {/* <li className="nav-item mx-3 text-uppercase">
                 <a className="nav-link" href="/About">About</a>
               </li> */}
               <li className="nav-item mx-3 text-uppercase">
-                <a className="nav-link" href="/Worship">Worship</a>
+                {/* <a onClick={(e)=>getLink(e)} className='nav-link'  href="/Worship">Worship</a> */}
+                <Link href={"/Worship"}><a className='nav-link' style={ router.pathname == "/Worship" ? {fontWeight:"bold"} : {}}>Worship</a></Link>
               </li>
               <li className="nav-item mx-3 text-uppercase">
-                <a className="nav-link" href="/Sermons">Sermons</a>
+                {/* <a onClick={(e)=>getLink(e)} className='nav-link'  href="/Sermons">Sermons</a> */}
+                <Link href={"/Sermons"}><a className='nav-link' style={ router.pathname == "/Sermons" ? {fontWeight:"bold"} : {}}>Sermons</a></Link>
               </li>
               <li className="nav-item mx-3 text-uppercase">
-                <a className="nav-link" href="/Events">Events</a>
+                {/* <a  className='nav-link'  href="/Events">Events</a> */}
+                <Link href={"/Events"}><a className="nav-link" style={ router.pathname == "/Events" ? {fontWeight:"bold"} : {}}>Events</a></Link>
               </li>
               <li className="nav-item mx-3 text-uppercase">
+                {/* <a  className='nav-link'  href="/Events">Events</a> */}
+                <Link href={"#About"}><a className="nav-link" style={ router.pathname == "#About" ? {fontWeight:"bold"} : {}}>About</a></Link>
+              </li>
+              {/* <li className="nav-item mx-3 text-uppercase">
                 <a className="nav-link " href="/SongList">Song List</a>
-              </li>
+              </li> */}
               <li className="nav-item mx-3 text-uppercase special-btn px-2">
                 <a className="nav-link " style={{color:"white"}} href="/PrayerRequest">Prayer Request</a>
               </li>
