@@ -2424,7 +2424,7 @@ export default function Worship() {
 	React.useEffect(()=>{
 		// myreq();
         console.log('WINDOWS',"CALLED TWICE")
-        // callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
+        callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
 	// 	setSongs(example)
 	// 	setPageProps({
 	// 		pageLength:example.pageInfo.totalResults,
