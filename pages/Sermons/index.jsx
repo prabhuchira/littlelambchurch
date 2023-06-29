@@ -2367,6 +2367,10 @@ export default function Worship() {
 	});
 
 
+    const openVideoInYoutube = (videoID) =>{
+        window.open("https://www.youtube.com/watch?v="+videoID);
+    }
+
 	const getDates = () =>{
 
 		let dArray = [];
@@ -2566,7 +2570,7 @@ export default function Worship() {
 															<div className="mx-3 text-start my-1 song_date" ><CalendarOutlined className="align-middle px-1 " />{new Date(i.snippet.publishedAt).toLocaleDateString().replaceAll("/","-")}
 															</div>
 															<div className="mx-3 text-start my-1 song_date">
-																<button className="btn btn-md view_youtube" style={{ fontSize: "12px !important" }}>&#9658; VIEW ON YOUTUBE</button>
+																<button className="btn btn-md view_youtube" style={{ fontSize: "12px !important" }} onClick={()=>openVideoInYoutube(i.snippet.resourceId.videoId)}>&#9658; VIEW ON YOUTUBE</button>
 															</div>
 														</div>
 													</div>
