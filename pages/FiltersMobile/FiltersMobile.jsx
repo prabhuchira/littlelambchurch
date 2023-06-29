@@ -56,7 +56,9 @@ function FiltersMobile(props){
           <div style={{
             fontSize:'24px',
             color:'red'
-          }}><CloseOutlined></CloseOutlined></div>
+          }} 
+          onClick={props.closeLaunchFilterDialog}
+          ><CloseOutlined></CloseOutlined></div>
           </div>
            
          
@@ -64,7 +66,7 @@ function FiltersMobile(props){
                 <div className="row">
                 
 
-                <div className="col-lg-12 d-none d-lg-block  ">
+                <div className="col-4  ">
 							<div className="my-bg2 m-1 rounded-2">
 								<div className="p-4">
 									<h3>Year</h3>
@@ -91,7 +93,10 @@ function FiltersMobile(props){
 									</ul>
 								</div>
 							</div>
-							<div className="my-bg2 m-1 my-3 rounded-2">
+              </div>
+
+              <div className="col-6">
+							<div className="my-bg2 m-1  rounded-2">
 								<div className="p-4">
 									<h3>Tags</h3>
 									<ul style={
@@ -114,7 +119,8 @@ function FiltersMobile(props){
 									</ul>
 								</div>
 							</div>
-						</div>
+              </div>
+				
 
 
   
