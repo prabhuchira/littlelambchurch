@@ -45,14 +45,18 @@ function FiltersMobile(props){
 
     return(
         <form>
-        <div className="p-5" style={{backgroundColor:"white"}}>
+        <div className="p-0" style={{backgroundColor:"white"}}>
             
          
 
             <div className="container-fluid">
 
           <div className="d-flex justify-content-between align-items-center">
-          <h3 className="text-primary">Filters </h3>
+          <div style={{
+            marginTop: "14px",
+            color: "grey !important",
+            fontSize: "18px",
+          }}>Filters </div>
           <div style={{
             fontSize:'24px',
             color:'red'
@@ -67,8 +71,8 @@ function FiltersMobile(props){
                 
 
                 <div className="col-4  ">
-							<div className="my-bg2 m-1 rounded-2">
-								<div className="p-4">
+							<div className="my-bg2  rounded-2">
+								<div className="p-1">
 									<h3>Year</h3>
 									<ul style={
 										{
@@ -95,9 +99,9 @@ function FiltersMobile(props){
 							</div>
               </div>
 
-              <div className="col-6">
-							<div className="my-bg2 m-1  rounded-2">
-								<div className="p-4">
+              <div className="col-8">
+							<div className="my-bg2   rounded-2">
+								<div className="p-1">
 									<h3>Tags</h3>
 									<ul style={
 										{
