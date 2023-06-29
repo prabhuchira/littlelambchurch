@@ -61,7 +61,7 @@ function FiltersMobile(props){
            
          
             <hr/>
-                <div class="row">
+                <div className="row">
                 
 
                 <div className="col-lg-12 d-none d-lg-block  ">
