@@ -85,7 +85,7 @@ function FiltersMobile(props){
 
 {/* <li  onClick={()=>filterDate(index,year)}><span style={activeTab == index ? {backgroundColor:"black",color:"white"} : {}}>{year}</span></li> */}
                                         {
-                                          props.youtubePlaylists.data_by_year.map((yearData,index)=> <li key={index} onClick={ ()=>props.callYoutubeEndPoint(yearData,index)}><span style={props.activeTab == yearData.name ? {backgroundColor:"black",color:"white"} : {}} >{yearData.name}</span></li>)
+                                          youtubePlaylists.data_by_year.map((yearData,index)=> <li key={index} onClick={ ()=>props.callYoutubeEndPoint(yearData,index)}><span style={props.activeTab == yearData.name ? {backgroundColor:"black",color:"white"} : {}} >{yearData.name}</span></li>)
                                         }
 
 									</ul>
@@ -109,7 +109,7 @@ function FiltersMobile(props){
 										<li><span>Easter</span></li> */}
 
                                         {
-                                          props.youtubePlaylists.data_by_tags.map((tagData,index)=> <li   onClick={ ()=>props.callYoutubeEndPoint(tagData,index)} key={index} ><span style={props.activeTab == tagData.name ? {backgroundColor:"black",color:"white"} : {}} >{tagData.name}</span></li>)  
+                                          youtubePlaylists.data_by_tags.map((tagData,index)=> <li   onClick={ ()=>props.callYoutubeEndPoint(tagData,index)} key={index} ><span style={props.activeTab == tagData.name ? {backgroundColor:"black",color:"white"} : {}} >{tagData.name}</span></li>)  
                                         }
 									</ul>
 								</div>
