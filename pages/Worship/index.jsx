@@ -2,29 +2,58 @@ import Footer from "../../shared/Footer/Footer";
 import Header from "../../shared/Header/Header";
 // import  worship from "./../S"
 
+
+import { initializeApp } from "firebase/app";
+import { addDoc, collection, getDocs, getFirestore } from "firebase/firestore";
+
+
+
 import React from 'react';
 import Head from "next/head";
 import BreadCrumb from "../../shared/BreadCrumb/BreadCrumb";
+
+
+const firebaseConfig = {
+	apiKey: "AIzaSyBTXyCeyzAH6yNJcP6Uc2amkM1zK9bkdSw",
+	authDomain: "testingapp-41f3b.firebaseapp.com",
+	databaseURL: "https://testingapp-41f3b-default-rtdb.firebaseio.com",
+	projectId: "testingapp-41f3b",
+	storageBucket: "testingapp-41f3b.appspot.com",
+	messagingSenderId: "334951218090",
+	appId: "1:334951218090:web:74ccbf15748ff95ae8c9d3",
+	measurementId: "G-YYR4MJE9PD"
+  };
+  
+
+  const app = initializeApp(firebaseConfig);
+
+  const db = getFirestore(app);
+  console.log(db,"DB")
+
+  
+
+
+
 let songs = [
 	{
-		date: "8 days ago",
-		yt_link: "https://www.youtube.com/embed/hLlcabNjeFM?start=345&end=622&enablejsapi=1",
-		title: "Randi Yehovanu Gurchi"
+		Date: "8 days ago",
+		SongLink: "https://www.youtube.com/embed/hLlcabNjeFM?start=345&end=622&enablejsapi=1",
+		SongName: "Randi Yehovanu Gurchi"
 	},
 	{
-		date: "8 days ago",
-		yt_link: "https://www.youtube.com/embed/hLlcabNjeFM?start=640&end=1005&enablejsapi=1",
-		title: "Jayamichina Devuniki"
+		Date: "8 days ago",
+		SongLink: "https://www.youtube.com/embed/hLlcabNjeFM?start=640&end=1005&enablejsapi=1",
+		SongName: "Jayamichina Devuniki"
 	},
 	{
-		date: "8 days ago",
-		yt_link: "https://www.youtube.com/embed/mJvEcW1bfGQ?start=884&end=1244",
-		title: "Geetham Geetham "
+		Date: "8 days ago",
+		SongLink: "https://www.youtube.com/embed/mJvEcW1bfGQ?start=884&end=1244",
+		SongName: "Geetham Geetham "
 	},
 	{
-		date: "8 days ago",
-		yt_link: "https://www.youtube.com/embed/vBYw64oIdlI?start=2180&end=2657",
-		title: "Jaya Prabhu  "
+		Date: "8 days ago",
+		SongLink: "https://www.youtube.com/embed/vBYw64oIdlI?start=2180&end=2657",
+		SongName: "Jaya Prabhu  "
 	},
 ]
 export default function Worship() {
@@ -36,17 +65,47 @@ export default function Worship() {
 		console.log(songsCopy)
 		setSongList(newSongs)
 	}
+
+	const fetchSongs = async()=>{
+		await getDocs(collection(db,"songs")).then((querySnapshot)=>{
+			const newData = querySnapshot.docs
+			.map((doc) => ({...doc.data(), id:doc.id }));	
+			setSongList(newData)
+			console.log(newData,"NEW DATA")
+	
+		})
+	  }
+
+
+	React.useEffect(()=>{
+		fetchSongs();
+	},[])
+
+	const addSong = async()=>{
+		console.log('Add Song')
+		await addDoc(collection(db,"songs"),{
+			Date: "100 days ago",
+			SongLink: "https://www.youtube.com/embed/hLlcabNjeFM?start=345&end=622&enablejsapi=1",
+			SongName: "Windows"
+		}).then(res=>{
+			console.log(res.id,"Added Id")
+		})
+	}
+
 	return (
 		<div>
 			<Head>
 				<title>Worship</title>
+			
 			</Head>
 			<Header />
+			
 			<br />
 			<br />
 			<br />
 			<br />
 			<div className=" custom_bg">
+			{/* <button onClick={addSong}>Add Song</button> */}
 				<div className="container" >
 					<div className="search_bar">
 						<div className="d-flex">
@@ -68,20 +127,20 @@ export default function Worship() {
 						{
 							songList.map(i => {
 								return (
-									<div key={i.yt_link} className="col-lg-5 ">
+									<div key={i.SongLink} className="col-lg-5 ">
 										<div className="m-3 song_item">
 											<div className="my-3">
-												<div className="mx-2 text-start h4 text-red song_title ">{i.title} </div>
+												<div className="mx-2 text-start h4 text-red song_title ">{i.SongName} </div>
 												<div className="mx-4  text-start text-uppercase sermon_speaker">LLC Choir</div>
 											</div>
 											{/* <iframe width={"500px"} height={"250px"}  src={i.yt_link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> */}
 											<div className="frame-container" >
-												<iframe className="responsive-iframe" src={i.yt_link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+												<iframe className="responsive-iframe" src={i.SongLink} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 											</div>
 											<br />
 											<div className="d-flex justify-content-between align-items-center my-2">
 												<div className="mx-3 text-start my-1 song_date" >
-													{i.date}<br />
+													{i.Date}<br />
 													<div className="badge badge-pill  bg-light text-dark ">#praise</div>
 												</div>
 												<div className="mx-3 text-start my-1 song_date">

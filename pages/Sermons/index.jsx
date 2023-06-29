@@ -6,6 +6,8 @@ import Header from "../../shared/Header/Header";
 
 import { CaretDownOutlined, CalendarOutlined } from '@ant-design/icons'
 import React from "react";
+import BackShadow from "../../shared/BackShadow/BackShadow";
+import FiltersMobile from "../FiltersMobile/FiltersMobile";
 
 
 // const example = [
@@ -2425,10 +2427,14 @@ export default function Worship() {
 		// return setSongs([]);
     }
 
+	const launchFilterDialog = ()=>{
+		console.log('Filter Dialog is called')
+	}
+
 	React.useEffect(()=>{
 		// myreq();
         console.log('WINDOWS',"CALLED TWICE")
-        callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
+        // callYoutubeEndPoint(youtubePlaylists.data_by_year[0]);
 	// 	setSongs(example)
 	// 	setPageProps({
 	// 		pageLength:example.pageInfo.totalResults,
@@ -2466,6 +2472,25 @@ export default function Worship() {
 
 	return (
 		<div>
+			<BackShadow>
+			<div style={{
+        display:"flex",
+        alignItems:"center",
+        justifyContent:"center",
+        height:"100vh"
+      }}>
+      <div
+        style={{
+          backgroundColor:'white',
+          width:"65%"
+        }}
+      >
+				<FiltersMobile youtubePlaylists={youtubePlaylists} activeTab={activeTab} callYoutubeEndPoint={callYoutubeEndPoint}/>
+				</div>
+				</div>
+
+
+			</BackShadow>
 			<Head>
 				<title>Sermons</title>
 			</Head>
@@ -2487,7 +2512,7 @@ export default function Worship() {
 					<div className="row   " >
 						<div className="col-lg-3 d-block d-lg-none ">
 							<div className="text-end ">
-								<button className=" btn btn-md btn-light border-1  " > Filters <CaretDownOutlined className="align-middle" /></button>
+								<button className=" btn btn-md btn-light border-1  " onClick={launchFilterDialog}> Filters <CaretDownOutlined className="align-middle" /></button>
 							</div>
 						</div>
 						<div className="col-lg-3 d-none d-lg-block  ">
