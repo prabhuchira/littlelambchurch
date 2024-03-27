@@ -2,10 +2,10 @@ import Footer from "../../shared/Footer/Footer";
 import Header from "../../shared/Header/Header";
 export default function About() {
   return (
-    <div>
+    <div >
       <Header />
       <br />
-      <div className="text-center def-grey">
+      <div id="About" className="text-center def-grey">
         <div className="about-bg "  >
         </div>
         <div className="container-fluid text-center page-layout ">

@@ -16,6 +16,10 @@ export default function Home() {
   const goToAbout = () => {
     router.push('#about')
   }
+
+  const openYoutube = () =>{
+    window.open("https://www.youtube.com/@littlelambchurchvanasthali3767")
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -65,7 +69,7 @@ export default function Home() {
                 <div>JOIN US ONLINE</div>
                 <div className="time">9:30 AM IST SUNDAY</div>
               </div>
-              <button className="ctm-btn-light my-3">
+              <button className="ctm-btn-light my-3" onClick={openYoutube}>
                 <img src="/assets/yt-logo.png" className="mx-2 yt-logo" />YOUTUBE.COM
               </button>
             </div>
